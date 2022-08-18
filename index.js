@@ -12,3 +12,10 @@ const server = http.createServer ( function (req, res) {
 server.listen(3000);
 
 
+// Let's test FileReadSync
+const fs = require('fs');
+const textIn = fs.readFileSync('input.txt', 'utf-8');
+console.log(textIn);
+
+const textOut = 'Ecriture de fichier.'
+fs.writeFileSync('output.txt', textOut);
